@@ -1,0 +1,207 @@
+.profile {
+    color: rgba(var(--text-color-rgb), 0.68);
+}
+
+.profile .header {
+    background-color: var(--bgr-secondary-color);
+    border-radius: 5px;
+    margin-bottom: 24px;
+    box-shadow: 0 3px 9px 1px rgba(var(--shadow-color-rgb), 0.15), 0 1px 5px 0 rgba(var(--shadow-color-rgb), 0.01), 0 1px 5px 0 rgba(var(--shadow-color-rgb), 0.01);
+}
+
+@media screen and (max-width: 577px) {
+    .profile .header .d-flex {
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+
+    .profile .header #rating-form {
+        width: 100%;
+    }
+
+    .profile .header .rating {
+        margin: auto;
+    }
+}
+
+.profile .header .buttons {
+    white-space: nowrap;
+}
+
+.profile .header img {
+    width: 100%;
+}
+
+.profile .header .info {
+    padding: 15px 24px 24px;
+}
+
+.profile .header .text {
+    flex: 1;
+}
+
+.profile .header h3 {
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.profile .header .info .avatar {
+    background-color: var(--bgr-secondary-color);
+    border-radius: 5px;
+    padding: 4px;
+    margin-top: -40px;
+    /* margin-right: 20px; */
+}
+
+.profile .header .info .avatar img {
+    border-radius: 5px;
+    height: 110px;
+    width: 110px;
+}
+
+.profile .about {
+    height: fit-content;
+    background-color: var(--bgr-secondary-color);
+    padding: 24px;
+    border-radius: 5px;
+    box-shadow: 0 3px 9px 1px rgba(var(--shadow-color-rgb), 0.15), 0 1px 5px 0 rgba(var(--shadow-color-rgb), 0.01), 0 1px 5px 0 rgba(var(--shadow-color-rgb), 0.01);
+}
+
+.profile .about p {
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.profile .about ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile .about ul:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.profile .about ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    overflow-wrap: anywhere;
+}
+
+.profile .about ul li strong {
+    font-weight: 500;
+}
+
+.profile .about li svg {
+    margin-right: 10px;
+}
+
+.profile .partnership {
+    height: fit-content;
+    flex: 1;
+    background-color: var(--bgr-secondary-color);
+    padding: 24px;
+    border-radius: 5px;
+    box-shadow: 0 3px 9px 1px rgba(var(--shadow-color-rgb), 0.15), 0 1px 5px 0 rgba(var(--shadow-color-rgb), 0.01), 0 1px 5px 0 rgba(var(--shadow-color-rgb), 0.01);
+}
+
+.profile .partnership h3 {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.profile .partnership .timeline-item {
+    margin-left: 7px;
+    padding-left: 10px;
+}
+
+.profile .partnership .timeline-item:not(:last-child) {
+    padding-bottom: 50px;
+    border-left: 1px solid rgba(207, 211, 236, 0.12);
+}
+
+.profile .partnership .timeline-item:last-child {
+    padding-bottom: 10px;
+    padding-left: 11px;
+}
+
+.profile .partnership .timeline-item .left>h4 {
+    margin-top: -5px;
+    margin-bottom: 0;
+    position: relative;
+    transform: translateY(-4px);
+}
+
+.profile .partnership .timeline-item .left>h4::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.profile .partnership .timeline-item:nth-of-type(5n + 1) .left>h4:before {
+    background-color: #ff9f43;
+}
+
+.profile .partnership .timeline-item:nth-of-type(5n + 2) .left>h4:before {
+    background-color: var(--primary-color);
+}
+
+.profile .partnership .timeline-item:nth-of-type(5n + 3) .left>h4:before {
+    background-color: #00cfe8;
+}
+
+.profile .partnership .timeline-item:nth-of-type(5n + 4) .left>h4:before {
+    background-color: rgb(var(--text-color-rgb));
+}
+
+.profile .partnership .timeline-item:nth-of-type(5n) .left>h4:before {
+    background-color: #a8aaae;
+}
+
+.profile .partnership .timeline-item p {
+    margin-top: 0px;
+}
+
+.profile .partnership .timeline-item .left div img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.profile .partnership .timeline-item .left div h4 {
+    margin: 1px;
+}
+
+.profile .partnership .timeline-item .left div p {
+    margin: 1px;
+}
+
+.profile .partnership span {
+    font-size: 14px;
+}
+
+.profile .review-item {
+    margin-top: 20px;
+}
+
+.profile .review-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.profile .review-item h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.profile .review-item p {
+    margin: 0;
+}

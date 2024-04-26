@@ -1,0 +1,49 @@
+/* GRID  */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid .grid-card {
+    padding: 10px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.grid .grid-card img {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    border-radius: 10px;
+    height: 80%;
+}
+
+.grid.brands .grid-card img {
+    height: 60%;
+}
+
+/* .grid.influencers .grid-card img {
+    height: 80%;
+} */
+
+.grid .grid-card .info {
+    transform: translateY(-50%);
+    bottom: 0;
+    width: 85%;
+    background-color: var(--bgr-secondary-color);
+    padding: 30px 35px;
+    border-radius: 10px;
+}
+
+.grid.brands .grid-card .info {
+    transform: translateY(-15%);
+}
+
+.grid .grid-card .info h2 {
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.grid .grid-card .info h4 {
+    margin: 0px;
+}

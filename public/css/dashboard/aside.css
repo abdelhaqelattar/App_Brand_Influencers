@@ -1,0 +1,133 @@
+aside {
+    background-color: var(--bgr-secondary-color);
+    color: rgba(var(--text-color-rgb), 0.68);
+}
+
+@media screen and (max-width: 991px) {
+    aside {
+        position: fixed;
+        transform: translateX(-100%);
+        height: 100%;
+        transition: all linear .3s;
+        z-index: 555;
+    }
+
+    aside.show {
+        transform: translateX(0);
+    }
+}
+
+aside .aside {
+    width: 260px;
+}
+
+aside .header {
+    padding: 0 12px 0 9px;
+    margin: 0 14px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: 60px;
+}
+
+aside .header .avatar svg {
+    width: 27px;
+}
+
+aside #toggle {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+aside .header h1 {
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside li a {
+    height: 38px;
+    margin: 5px 14px;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+aside li a {
+    color: inherit;
+    border-radius: 5px;
+}
+
+aside li a:hover {
+    background-color: rgba(var(--light-color-rgb), .04);
+}
+
+aside li a.active {
+    color: var(--light-color);
+    background: linear-gradient(72.47deg, rgb(115, 103, 240) 22.16%, rgba(115, 103, 240, .7) 76.47%) !important;
+    box-shadow: 0 3px 1px -2px rgba(var(--shadow-color-rgb), 0.15), 0 1px 5px 0 rgba(var(--shadow-color-rgb), 0.01), 0 1px 5px 0 rgba(var(--shadow-color-rgb), 0.01);
+}
+
+aside li svg {
+    font-size: 20px;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+
+@media screen and (min-width: 992px) {
+
+    aside.pinned,
+    aside.pinned .aside,
+    aside.pinned li {
+        width: 75px !important;
+        transition: all ease .3s;
+    }
+
+    aside.pinned .header-btn {
+        opacity: 0;
+    }
+
+    aside.pinned label,
+    aside.pinned h1 {
+        transition: width .15s .15s linear, opacity .15s .15s linear;
+        opacity: 0;
+        width: 0;
+        white-space: nowrap;
+        /* display: none !important; */
+    }
+
+    aside.pinned li a {
+        gap: 0;
+        transition: all .3s linear;
+    }
+
+    aside.pinned:hover,
+    aside.pinned:hover .aside,
+    aside.pinned:hover li {
+        width: 260px !important;
+    }
+
+    aside.pinned:hover .header-btn {
+        opacity: 1;
+    }
+
+    aside.pinned:hover label,
+    aside.pinned:hover h1 {
+        opacity: 1;
+        width: calc(100% - 50px);
+        /* display: block !important; */
+    }
+
+    aside.pinned:hover li a {
+        gap: 10px;
+    }
+
+}

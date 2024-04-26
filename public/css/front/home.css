@@ -1,0 +1,1138 @@
+@import url("components.css");
+
+/**
+    * some style is repeated in all pages thzt why we didn't comment all the code and all  the style
+*/
+/**
+    * The font-family property specifies the font for an element.
+    * box-sizing: border-box; for make padding and border not affect the width and height of the element
+    * If we set box-sizing: border-box; on an element, padding and border are included in the width and height:
+*/
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+ /**
+   * add decoration none and color inherit for all a tag
+   * text-decoration: none; for remove the underline of the link
+ */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/**
+    * give a max-width for img tag
+*/
+
+img {
+    max-width: 100%;
+}
+/**
+    * specify the font for all heading elements
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Urbanist', sans-serif;
+}
+/**
+    * ul tag for remove the default style of ul tag and give a margin and padding 0 
+
+*/
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/**
+    * specify the font-size and color for body
+*/
+
+body {
+    color: rgb(27, 36, 48);
+    font-size: 16px;
+    margin: 0;
+}
+/**
+    * define a class name bar contain some style for the bars icon
+    * cursor: pointer; for make the cursor change to pointer when hover on the bars icon
+*/
+
+
+
+.bars {
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+/**
+    * define class name aside contain some style for the aside tag
+    * z-index: 999; for make the aside tag appear in front of the other elements
+    * position: fixed; for make the aside tag fixed in the left of the screen
+*/
+
+aside {
+    background-color: #f7f7f7;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 360px;
+    height: 100%;
+    z-index: 999;
+    padding: 20px;
+    color: #1b2430;
+    left: -360px;
+    transition: all .3s linear;
+}
+/**
+    * define some class name for the aside tag contain some style
+*/
+
+aside.show {
+    left: 0;
+}
+
+
+aside .top {
+    margin-bottom: 30px;
+}
+
+aside img {
+    width: 140px;
+}
+
+aside ul li {
+    padding: 18px 0;
+}
+/**
+     * tag name header for make the header tag fixed in the top of the screen
+     * and give him some style
+     * text-transform: uppercase; for make the text uppercase
+*/
+
+header {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+/**
+    * define class name nav contain some style for the nav tag in header tag
+    * nav tag contain a ul tag
+    * ul tag contain a li tag
+    * li contain a a tag that contain a link to the home page or the about page or the contact page
+    * this classes contain some style for the nav tag and the ul tag and the li tag and the a tag to style the heaadre 
+*/
+ 
+header nav {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+header nav img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: 1;
+    gap: 35px;
+    justify-content: center;
+}
+
+header nav .buttons a i {
+    margin-left: 5px;
+    font-size: .9em;
+}
+
+header ul a:hover,
+header ul a.active {
+    color: #3A98B9;
+}
+/**
+    * define class name hero contain some style for the hero section
+    * position: relative; for make the position of the hero section relative
+*/
+.hero {
+    position: relative;
+    padding-top: 100px;
+}
+/**
+     * hero::before for make the hero section contain a background image and give it some style
+     * z-index: -1; for make the background image behind the other elements
+*/
+  
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(145%) contrast(100%) saturate(120%) blur(0px) hue-rotate(0deg);
+    background-image: url("https://www.wordpress.codeinsolution.com/influexa/wp-content/uploads/sites/24/2023/03/photo-image-abstract-colorful-with-light-background-pink-purple-colors-night-light-elegance-smooth-e1680509069955.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.hero h1 {
+    margin-top: 0;
+    font-size: 72px;
+    font-weight: 600;
+}
+
+/** 
+     * @media only screen and (max-width: 768px) for make the style of the hero section responsive
+*/
+
+@media only screen and (max-width: 768px) {
+    .hero h1 {
+        margin-top: 0;
+        font-size: 45px;
+        font-weight: 600;
+    }
+}
+/**
+     * make all the elements inside the h1 tag inherit the font-family
+*/
+
+.hero h1 * {
+    font-family: inherit;
+}
+/**
+    * stroke: #F99417; for make the color of the text inside the svg tag orange
+    * stroke-width: 12px; for make the width of the stroke 12px
+    * fill: none; for make the fill of the svg tag none
+    * position: absolute; for make the position of the svg tag absolute
+*/
+ 
+.hero h1 svg {
+    stroke: #F99417;
+    stroke-width: 12px;
+    fill: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 100%;
+}
+/**
+    * .hero .text .list for make the list inside the hero section contain some style
+*/
+
+.hero .text .list {
+    gap: 5px 25px;
+    margin: 50px 0 100px;
+}
+
+.hero .text .list i {
+    color: #F99417;
+    margin-right: 5px;
+}
+
+.hero .images>div {
+    padding-left: 50px;
+}
+
+.hero .images .image1 img {
+    border-radius: 500px 500px 50px 500px;
+    max-height: 100vh;
+    margin: auto;
+    display: block;
+}
+
+.hero .images .image2 .img {
+    position: relative;
+    margin-top: 50px;
+}
+
+.hero .images .image2 .img img {
+    border-radius: 50px 500px 500px 500px;
+    position: absolute;
+    max-height: 100vh;
+    margin: auto;
+    display: block;
+}
+/**
+    * add responsive style for the hero section for small screens and medium screens and large screens
+*/
+
+/* Small screens */
+@media only screen and (max-width: 767px) {
+    .hero .container {
+        padding: 0;
+    }
+
+    .hero .d-flex.flex-wrap {
+        flex-direction: column;
+    }
+
+    .hero .col-12.col-lg-6.text {
+        order: 1;
+    }
+
+    .hero .col-12.col-lg-6.d-flex.flex-wrap.images {
+        order: 2;
+        margin-top: 30px;
+    }
+
+    .hero .col-12.col-lg-6.image1 {
+        order: 1;
+    }
+
+    .hero .col-12.col-lg-6.image2 {
+        order: 2;
+    }
+
+    .hero .images .col-12.col-lg-6 {
+        width: 100%;
+    }
+
+    .story .section-title {
+        font-size: 24px;
+    }
+}
+
+/* Medium screens */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .hero .col-12.col-lg-6.text {
+        font-size: 26px;
+    }
+
+    .hero .col-12.col-lg-6.d-flex.flex-wrap.images .img {
+        margin-left: -30px;
+    }
+
+    .hero .images .col-12.col-lg-6 {
+        width: 50%;
+    }
+
+    .partners .col-12.col-lg-3 {
+        width: 33%;
+    }
+
+    .story .section-title {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero .images>div {
+        padding-left: 0px;
+    }
+
+    .hero .images .image2 .img img {
+        position: static;
+    }
+}
+
+
+.hero .images .image2 .play {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(96, 95, 95, 0.169);
+    height: 195px;
+    width: 195px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+.hero .images .image2 .play i::before {
+    transform: translate(2px, -2px);
+}
+
+.hero .images .image2 .play h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+}
+
+.partners {
+    padding: 55px 0;
+    width: 70%;
+}
+
+
+/* Large devices (large desktops, high-res laptops) */
+@media only screen and (max-width: 992px) {
+    .partners {
+        width: 50%;
+        margin-bottom: 180px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .partners {
+        width: 80%;
+        margin: auto;
+        justify-content: center;
+    }
+}
+  /** 
+      * opacity: 0.7; for make the opacity of the images 0.7
+  */
+.partners img {
+    opacity: 0.7;
+    filter: brightness(100%) contrast(100%) saturate(0%) blur(0px) hue-rotate(0deg);
+    max-width: 200px;
+}
+/**
+    * we use filter none for make the filter of the images none
+*/
+
+.partners img:hover {
+    opacity: 1;
+    filter: none;
+}
+
+.story {
+    padding: 100px 0;
+}
+
+.story h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.story ul {
+    margin-left: 25px;
+}
+
+.story ul p {
+    margin: 0;
+}
+
+.social-media {
+    margin-top: 150px;
+    background: linear-gradient(270deg, #E9F8F9 50%, #F2295B00 50%);
+}
+
+.social-media ul {
+    border-radius: 15px;
+    background-color: #E9F8F9;
+    padding: 50px 0;
+}
+
+.social-media ul li:not(:last-of-type) {
+    border-right: 1px solid #605F5F2B;
+}
+
+.social-media ul i {
+    color: #F99417;
+    font-size: 65px;
+}
+
+
+.social-media ul .number {
+    font-size: 48px;
+    display: block;
+    font-weight: 600;
+    font-family: 'Urbanist', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .social-media ul {
+        gap: 50px;
+    }
+
+    .social-media ul i {
+        color: #F99417;
+        font-size: 50px;
+    }
+
+    .social-media ul .number {
+        font-size: 31px;
+    }
+}
+
+/* Default styles */
+/**
+    * make some style for the register section
+    * make position relative for the registre class 
+    * all style is reapeted 
+*/
+.register {
+    background-image: url('https://www.wordpress.codeinsolution.com/influexa/wp-content/uploads/sites/24/2023/03/influencers-vlogging-from-home-e1680509153829.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0;
+    position: relative;
+}
+
+.register .container {
+    z-index: 5;
+    position: relative;
+    color: #fff;
+}
+
+.register .container>div {
+    width: 66.666%;
+}
+
+.register .container span {
+    font-size: 14px;
+    margin: 0 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.register .container a {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.register .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1B2430;
+    z-index: 1;
+    opacity: 0.75;
+}
+
+/* Media queries for smaller screens */
+@media only screen and (max-width: 991px) {
+    .register {
+        padding: 150px 0;
+    }
+
+    .register .container>div {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Media queries for even smaller screens */
+@media only screen and (max-width: 767px) {
+    .register {
+        padding: 100px 0;
+    }
+
+    .register .container span {
+        margin: 30px 0;
+        display: block;
+    }
+
+    .register .container a {
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+        max-width: 70%;
+    }
+}
+
+.services {
+    padding: 100px 0;
+}
+
+.services-grid {
+    margin: 50px 0;
+}
+
+.service-card {
+    padding: 10px;
+    text-align: center;
+}
+
+.service-card div {
+    padding: 50px;
+    border-radius: 15px;
+    border: 1px solid #605F5F2B;
+}
+
+
+.service-card div:hover, .service-card div.focus {
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+.service-card h3 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.service-card a {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+}
+
+.service-card img {
+    width: auto;
+    height: 70px;
+    display: block;
+    margin: 30px auto 40px;
+}
+
+.statistics {
+    background-color: #E9F8F9;
+    padding: 150px 0 0;
+}
+
+.statistics .container>div {
+    padding: 0 30px;
+}
+
+.stats-item {
+    margin: 20px 0;
+}
+
+.stats-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.stats-item .progress {
+    background-color: #6BB0CE;
+    display: block;
+    width: 100%;
+    height: 5px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stats-item .progress div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #F99417;
+    border-radius: 10px;
+}
+
+.statistics q {
+    font-size: 18px;
+    font-style: italic;
+    list-style: 1.6;
+}
+
+.statistics img {
+    position: relative;
+}
+
+.statistics .second {
+    margin-top: 50px;
+}
+
+.statistics .second::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: #FBC048;
+}
+
+
+.influencers {
+    padding: 150px 0;
+}
+
+.influencers h2 {
+    margin-top: 0;
+}
+
+.influencers .categories .focus {
+    background-color: #3A98B9;
+    color: #fff;
+}
+
+.influencers .categories li span {
+    text-align: center;
+    display: block;
+    margin: 10px;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 50px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.influencers .influencer-card {
+    border-radius: 20px;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.influencers .influencer-card>div {
+    padding: 20px 50px;
+}
+
+.influencers .name {
+    margin: 20px 0 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.influencers .role {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #F99417;
+}
+
+.influencers .divider {
+    display: block;
+    border-top: 1px solid #605F5F2B;
+    margin: 30px 0;
+}
+
+.influencer-card .title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.influencer-card .social {
+    margin-top: 50px;
+}
+
+.influencers .diff {
+    margin-top: 100px;
+}
+
+.influencers .card> :first-child {
+    padding-right: 30px;
+    border-right: 1px solid #605F5F2B;
+}
+
+
+.influencers .title h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.influencers .card> :nth-child(2) {
+    padding-left: 30px;
+}
+
+.influencers .card span {
+    text-align: center;
+    display: block;
+}
+
+.influencers .card .number {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 48px;
+    color: #F99417;
+    font-weight: 600;
+}
+
+.influencers .card sup {
+    color: #3A98B9;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .influencers .card> :first-child {
+        border: none;
+        padding: 0;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #605F5F2B;
+    }
+
+    .influencers .card> :nth-child(2) {
+        padding-left: 0px;
+        padding-top: 30px;
+    }
+}
+
+.whychooseus {
+    padding: 150px 0 100px;
+    background-color: #E9F8F9;
+}
+
+.whychooseus ul {
+    margin-left: 30px;
+}
+
+
+.howitworks {
+    padding: 150px 0;
+}
+
+.howitworks img {
+    width: 100px;
+}
+
+.howitworks h3 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.howitworks i {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.howitworks .card {
+    padding: 30px 40px;
+}
+
+.howitworks a {
+    font-weight: 500;
+    margin-top: 50px;
+    font-size: 14px;
+    letter-spacing: 3.5px;
+}
+
+
+.reviews {
+    padding: 100px 0;
+    margin-bottom: 250px;
+    background-color: #1B2430;
+}
+
+.reviews .title {
+    max-width: 600px;
+    margin: auto;
+}
+
+.reviews h2 {
+    color: #fff;
+}
+
+.reviews .title p {
+    color: #A2A2A2;
+    margin-bottom: 50px;
+}
+
+.reviews .float-content {
+    position: relative;
+}
+
+.reviews .review-cards {
+    position: absolute;
+    max-width: 1290px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+}
+
+.reviews .review-cards .review-card {
+    padding: 30px;
+    color: #1B2430;
+}
+
+.reviews .review-cards .review-card:first-of-type {
+    border-right: 1px solid #605F5F2B;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .reviews .review-cards .review-card:first-of-type {
+        border-right: none;
+        border-bottom: 1px solid #605F5F2B;
+    }
+}
+
+.reviews .review-cards .review-card img {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.reviews .review-cards .review-card .card-header {
+    margin-bottom: 30px;
+}
+
+.reviews .review-cards .review-card .card-header i {
+    font-size: 40px;
+    color: #3A98B9;
+}
+
+.reviews .review-cards .review-card .card-header h2 {
+    font-size: 22px;
+    color: #1B2430;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-weight: 500;
+}
+
+.reviews .review-cards .review-card .card-header p {
+    color: #F99417;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+.faq {
+    padding: 100px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .faq {
+        padding-top: 500px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .faq {
+        padding-top: 250px;
+    }
+}
+
+.faq .title {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.accordion-item {
+    margin-bottom: 0;
+    padding: 0 40px;
+    border-radius: 20px;
+    padding: 25px 40px;
+    border-radius: 20px;
+}
+
+.accordion {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.accordion-header {
+    border-bottom: 1px solid #605F5F2B;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.accordion-header h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.accordion-header i {
+    color: #3A98B9;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.accordion-item .accordion-content {
+    height: 0;
+    overflow: hidden;
+    color: transparent;
+    transition: all .3s linear;
+}
+
+.accordion-item.focus {
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-item.focus i {
+    color: #F99417;
+    transform: rotateX(180deg);
+    transition: all .3s linear;
+}
+
+.accordion-item.focus .accordion-header {
+    border: none;
+}
+
+.accordion-item.focus .accordion-content {
+    color: inherit;
+}
+
+
+footer {
+    margin-top: 150px;
+    padding: 100px 0 0;
+    background-color: #1B2430;
+}
+
+footer input {
+    border-radius: 30px;
+    padding: 20px;
+    outline: none;
+    border: 1px solid #A2A2A2;
+}
+
+.newsletter {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.newsletter>div {
+    background-color: #E9F8F9;
+    position: absolute;
+    max-width: 1290px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px 20px 50px;
+    width: 95%;
+    left: 50%;
+    top: -100px;
+    transform: translate(-50%, -50%);
+}
+
+.newsletter .container {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+footer .footer-content {
+    text-align: center;
+    color: #A2A2A2;
+    margin-bottom: 50px;
+}
+
+footer .copyright {
+    text-align: center;
+    color: #A2A2A2;
+}
+
+footer .footer-content h2 {
+    color: #ffffff;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #A2A2A2;
+    opacity: .4;
+}
+
+footer .footer-content .social i {
+    width: 40px;
+    height: 40px;
+}
+
+.team {
+    padding: 100px 0;
+}
+
+/* GRID  */
+.team .grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team .grid .grid-card {
+    padding: 10px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.team .grid .grid-card img {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    border-radius: 10px;
+    height: 80%;
+}
+
+.team .grid.brands .grid-card img {
+    height: 60%;
+}
+
+/* .team .grid.influencers .team .grid-card img {
+    height: 80%;
+} */
+
+.team .grid .grid-card .info {
+    transform: translateY(-50%);
+    bottom: 0;
+    width: 85%;
+    background-color: #fff;
+    padding: 30px 35px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+}
+
+.team .grid.brands .grid-card .info {
+    transform: translateY(-15%);
+}
+
+.team .grid .grid-card .info h2 {
+    margin: 0px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.team .grid .grid-card .info h4 {
+    margin: 0px;
+    color: #F99417;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact {
+    padding: 100px 0;
+}
+
+.contact form {
+    padding: 40px;
+    box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.contact input, .contact textarea {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    line-height: 1.6em;
+    border: 1px solid #605F5F2B;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.contact .contact-text {
+    padding: 0 50px;
+}
+
+.contact iframe {
+    margin-top: 50px;
+}
